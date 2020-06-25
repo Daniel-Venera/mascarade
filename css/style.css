@@ -1,0 +1,152 @@
+/* div {
+  border: 1px solid red;
+} */
+
+/* Container */
+
+#container {
+  width: 1200px;
+  margin: auto;
+  padding: 10px;
+}
+
+/* Filter */
+
+#filter {
+  width: 75%;
+  margin: auto;
+  padding: 10px
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Type */
+
+.filter-type, .filter-color {
+  text-align: center;
+}
+
+
+.type {
+  width: 200px;
+  height: 50px;
+  background-color: white;
+  border: 1px solid #888888;
+  border-radius: 18px;
+  font-size: 18px;
+  color: #888888;
+  margin: 10px;
+}
+
+
+.selected-type {
+  background-color: #1b047c;
+  color: white;
+}
+
+/* Colors  */
+
+
+.filter-color {
+  margin-top: 30px;
+  padding-top: 10px;
+}
+.color {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border: none;
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px;
+
+}
+
+.selected-color {
+  border: 1px solid #1b047c;
+}
+
+#fushia {
+  background-color:#a71560;
+}
+
+#graphique {
+  background-color:#0b254c;
+}
+
+#green {
+  background-color:#047d52;
+}
+
+#blue {
+  background-color:#037bb0;
+}
+
+#orange {
+  background-color:#e55d2b;
+}
+
+#horizon {
+  background-color:#7ba5e5;
+}
+
+
+.hidden{
+  display: none;
+}
+
+
+/* Masks */
+
+#masks {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+img {
+  width: 150px;
+  margin: 0px 10px 0px 10px;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 768px) {
+  body, html {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  #container {
+    width: 300px;
+    margin: auto;
+    padding: 0px;
+  }
+
+  .type {
+    width: 200px;
+  }
+
+  #filter {
+    width: 100%;
+  }
+
+  #masks {
+    padding: 10px;
+  }
+
+  img {
+    width: 200px;
+  }
+}
