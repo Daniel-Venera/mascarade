@@ -63,3 +63,26 @@ buttons.forEach(button =>
     
   })
 )
+
+var modal = document.querySelector('#simpleModal')
+var modalBtn = document.querySelector('#modalBtn')
+var closeBtn = document.querySelector('#closeBtn')
+var imageModal = document.querySelector('#imageModal')
+
+masks.forEach(function(mask){
+  mask.addEventListener('click', function(mask) {
+  modal.style.display = 'block'
+  imageModal.src = mask.target.attributes.src.value
+  } )
+})
+closeBtn.addEventListener('click', closeModal)
+window.addEventListener('click', clickOutside)
+
+function closeModal() {
+  modal.style.display = 'none'
+}
+
+function clickOutside(e) {
+  if (e.target == modal)
+  modal.style.display = 'none'
+}
