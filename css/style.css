@@ -114,8 +114,8 @@ button::-moz-focus-inner {
 }
 
 
-.hidden{
-  display: none;
+.hidden {
+  display: none !important
 }
 
 
@@ -144,10 +144,20 @@ img {
   margin: 0px 10px 0px 10px;
 }
 
-.cart {
-  height: 30px;
+/* Cart */
+
+.mask-on-cart {
+  display: block;
 }
 
+.number-items {
+  display: block;
+}
+
+.cart-item-container {
+  display: flex;
+  align-items: center;
+}
 
 /* Modal */
 
