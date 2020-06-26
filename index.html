@@ -5,14 +5,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+  <meta property='og:image'
+    content="https://www.consignor.com/wp-content/uploads/2019/06/Senior-Front-End-Developer-1080x675.jpg" />
+  <link rel="icon" href="images/pc.png" type="image/png">
   <title>Mascarade</title>
 </head>
 
 <body>
+  <nav>
+  <div>
+    <p>Mascarade</p>
+    <ul>
+      <li><a href="#container">Masks</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </div>
+    <ul id="download">
+      <li><a href="https://www.linkedin.com/in/daniel-venera/" target="_blank">Contact</a></li>
+      <li ><a id='toggleDropdown'><i class="fa fa-cart-arrow-down"></i></a>
+        <ul id="customerCart" class='hidden'>
+          <li>Vous n'avez aucun masque dans votre panier</li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <div class="banner">
+    <a href="#container">
+      <div id="arrow">&#8964;</div>
+    </a>
+  </div>
   <div id='container'>
-    <div id="customerCart">
-    </div>
-    <div id="filter">
+    
+    <section id="filter">
+      <h2>Masks</h2>
       <div class='filter-type'>
         <button id='all' class='type selected-type'>Tous</button>
         <button id='plain' class='type'>Uni</button>
@@ -26,7 +54,7 @@
         <button id='orange' class='color plain'></button>
         <button id='horizon' class='color printed'></button>
       </div>
-    </div>
+    </section>
     <div id='masks'>
       <div class='mask-container'>
         <img class='mask plain fushia' src="images/masque_rouge.jpg" />
@@ -41,26 +69,48 @@
         <button class='cart'>Ajouter au panier</button>
       </div>
       <div class='mask-container'>
-      <img class='mask plain orange' src="images/masque_orange.jpg" />
-      <button class='cart'>Ajouter au panier</button>
+        <img class='mask plain orange' src="images/masque_orange.jpg" />
+        <button class='cart'>Ajouter au panier</button>
       </div>
       <div class='mask-container'>
         <img class='mask printed graphique' src="images/masque_imprime_0.jpg" />
         <button class='cart'>Ajouter au panier</button>
       </div>
       <div class='mask-container'>
-           <img class='mask printed horizon' src="images/masque_imprime_1.jpg" />
-           <button class='cart'>Ajouter au panier</button>
-          </div>
+        <img class='mask printed horizon' src="images/masque_imprime_1.jpg" />
+        <button class='cart'>Ajouter au panier</button>
+      </div>
 
-    <div id="simpleModal" class="modal">
-      <div class="modal-content">
-        <img id='imageModal'>
-        <div id="closeBtn">&times;</div>
+      <div id="simpleModal" class="modal">
+        <div class="modal-content">
+          <img id='imageModal'>
+          <div id="closeBtn">&times;</div>
+        </div>
       </div>
     </div>
+    <section id='about'>
+      <h2>About</h2>
+      <div id="about-quote">
+        <img src='images/daniel_venera.jpg'>
+        <p data-aos="fade-right">
+        <blockquote>
+          After 2 years of experience in managing digital projects for different companies, I've decided to become a web
+          developer. I'm passionate about new technologies and web programming. I'm currently looking for a work-study
+          with my school (OpenClassrooms). I'm organized, rigorous and always optimistic. I hope you enjoyed the website.
+          Please
+          <a href="https://www.linkedin.com/in/daniel-venera/" target="_blank">contact me</a> for more detailed
+          information.
+        </blockquote>
+        </p>
+      </div>
+    </section>
   </div>
-
+  
+  <footer>
+    Created with <i class="fa fa-heart"></i> by Daniel Venera
+    <br>
+    <a href='https://github.com/Daniel-Venera/portfolio' target="_blank"><i class='fa fa-github'></i></a>
+  </footer>
   <script src="js/script.js"></script>
 </body>
 

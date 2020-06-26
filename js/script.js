@@ -1,6 +1,5 @@
 let log = console.log
 
-
 let buttons = document.querySelectorAll('button.type, button.color')
 let types = document.querySelectorAll('.type')
 let masks = document.querySelectorAll('.mask')
@@ -50,7 +49,6 @@ buttons.forEach(button =>
     }
 
     if (e.target.id != 'all' && !e.target.classList.contains('color')) {
-
       colors.forEach(function (color) {
         if (!color.classList.contains(e.target.id)) {
           color.classList.add('hidden')
@@ -79,7 +77,6 @@ carts.forEach(function (cart) {
     
     document.querySelectorAll('.mask-on-cart').forEach(function (maskOnCart) {
       if (maskComingInCart.src == maskOnCart.src) {
-        log(maskOnCart.parentNode.childNodes[1].lastChild.innerHTML)
         maskOnCart.parentNode.childNodes[1].lastChild.innerHTML = parseInt(maskOnCart.parentNode.childNodes[1].lastChild.innerHTML) + 1
         maskAlreadyOnCart = 1
       }
@@ -87,13 +84,42 @@ carts.forEach(function (cart) {
     if (maskAlreadyOnCart == 0 || document.getElementsByClassName('mask-on-cart').length == 0) {
       customerCart.insertAdjacentHTML('beforeend', '<div class="cart-item-container"></div>')
       customerCart.lastChild.appendChild(maskComingInCart)
-      customerCart.lastChild.insertAdjacentHTML('beforeend', '<p class="number-items">x<span>1</span></p>')
-      customerCart.lastChild.insertAdjacentHTML('beforeend', '<button class="delete-item">suppress</button>')
+      customerCart.lastChild.insertAdjacentHTML('beforeend', '<p class="number-items">x<span>1</span></p><button class="operation">-</button> <button class="operation">+</button><button class="delete-item">suppress</button>')
+      customerCart.childNodes[1].innerHTML = " "
     }
     maskAlreadyOnCart = 0
   })
 })
 
+
+
+
+document.addEventListener('click', function(e){
+  if (e.target && e.target.classList.contains('operation')){
+    if (e.target.innerHTML == '-') {
+      e.target.parentNode.childNodes[1].lastChild.innerHTML = parseInt(e.target.parentNode.childNodes[1].lastChild.innerHTML) - 1
+      if (e.target.parentNode.childNodes[1].lastChild.innerHTML == 0) {
+        e.target.parentNode.remove()
+        cartEmpty()
+      }
+    } else {
+      e.target.parentNode.childNodes[1].lastChild.innerHTML = parseInt(e.target.parentNode.childNodes[1].lastChild.innerHTML) + 1
+    }
+  }
+})
+
+document.addEventListener('click', function(e){
+  if (e.target && e.target.classList.contains('delete-item')){
+    e.target.parentNode.remove()
+    cartEmpty()
+  }
+})
+
+function cartEmpty(){
+  if(customerCart.childNodes.length == 3){
+    customerCart.childNodes[1].innerHTML = "Vous n'avez aucun masque dans votre panier"
+  }  
+}
 
 
 
@@ -123,3 +149,10 @@ function clickOutside(e) {
   if (e.target == modal)
     modal.style.display = 'none'
 }
+
+// Dropdown toggle
+
+var toggleDropdown = document.getElementById('toggleDropdown')
+toggleDropdown.addEventListener('click', function(){
+  customerCart.classList.toggle('hidden')
+})
