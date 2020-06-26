@@ -45,19 +45,23 @@ button::-moz-focus-inner {
 }
 
 
+.type, .cart {
+  background-color: white;
+  border: 1px solid #888888;
+  font-size: 18px;
+  color: #888888;
+  
+}
+
 .type {
   width: 200px;
   height: 50px;
-  background-color: white;
-  border: 1px solid #888888;
   border-radius: 18px;
-  font-size: 18px;
-  color: #888888;
   margin: 10px;
 }
 
 
-.selected-type {
+.selected-type, .cart {
   background-color: #1b047c;
   color: white;
 }
@@ -127,10 +131,23 @@ button::-moz-focus-inner {
   margin-top: 20px;
 }
 
+.mask {
+  display: block;
+}
+
+.mask-container {
+  text-align: center;
+}
+
 img {
   width: 150px;
   margin: 0px 10px 0px 10px;
 }
+
+.cart {
+  height: 30px;
+}
+
 
 /* Modal */
 

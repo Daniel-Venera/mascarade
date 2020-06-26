@@ -10,6 +10,9 @@
 
 <body>
   <div id='container'>
+    <div id="customerCart">
+      A
+    </div>
     <div id="filter">
       <div class='filter-type'>
         <button id='all' class='type selected-type'>Tous</button>
@@ -26,7 +29,11 @@
       </div>
     </div>
     <div id='masks'>
-      <img class='mask plain fushia' src="images/masque_rouge.jpg" />
+      <div class='mask-container'>
+        <img class='mask plain fushia' src="images/masque_rouge.jpg" />
+        <button class='cart'>Ajouter au panier</button>
+      </div>
+
       <img class='mask plain green' src="images/masque_vert.jpg" />
       <img class='mask plain blue' src="images/masque_bleu.jpg" />
       <img class='mask plain orange' src="images/masque_orange.jpg" />
@@ -36,7 +43,8 @@
 
     <div id="simpleModal" class="modal">
       <div class="modal-content">
-        <img id='imageModal'><div id="closeBtn">&times;</div>
+        <img id='imageModal'>
+        <div id="closeBtn">&times;</div>
       </div>
     </div>
   </div>

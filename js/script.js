@@ -1,6 +1,7 @@
 let log = console.log
 
-let buttons = document.querySelectorAll('button')
+
+let buttons = document.querySelectorAll('button.type, button.color')
 let types = document.querySelectorAll('.type')
 let masks = document.querySelectorAll('.mask')
 let colors = document.querySelectorAll('.color')
@@ -63,6 +64,27 @@ buttons.forEach(button =>
     
   })
 )
+
+// Cart
+var carts = document.querySelectorAll('.cart')
+var masksOnCart = document.querySelectorAll('.mask-on-cart')
+
+carts.forEach(function(cart) {
+  cart.addEventListener('click', function(cart) {
+    document.querySelectorAll('.mask-on-cart').forEach(function(maskOnCart){
+    log(maskOnCart.src)
+    // if (cart.target.parentNode.children[0].src == maskOnCart.target.src) {
+    //   log('oui')
+    // }
+    })
+    var maskComingInCart = document.createElement('img')
+    maskComingInCart.src = cart.target.parentNode.children[0].src
+    maskComingInCart.classList.add('mask-on-cart')
+    document.querySelector('#customerCart').appendChild(maskComingInCart)
+  })
+})
+
+// Modal
 
 var modal = document.querySelector('#simpleModal')
 var modalBtn = document.querySelector('#modalBtn')
