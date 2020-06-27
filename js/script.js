@@ -57,16 +57,13 @@ buttons.forEach(button =>
         }
       })
     }
-
-
-
   })
 )
 
 // Cart
 var carts = document.querySelectorAll('.cart')
 var masksOnCart = document.querySelectorAll('.mask-on-cart')
-let maskAlreadyOnCart = 0
+let maskAlreadyOnCart = false
 let customerCart = document.querySelector('#customerCart')
 
 carts.forEach(function (cart) {
@@ -77,40 +74,61 @@ carts.forEach(function (cart) {
     
     document.querySelectorAll('.mask-on-cart').forEach(function (maskOnCart) {
       if (maskComingInCart.src == maskOnCart.src) {
-        maskOnCart.parentNode.childNodes[1].lastChild.innerHTML = parseInt(maskOnCart.parentNode.childNodes[1].lastChild.innerHTML) + 1
-        maskAlreadyOnCart = 1
+        maskOnCart.parentNode.querySelector('.number').innerHTML = parseInt(maskOnCart.parentNode.querySelector('.number').innerHTML) + 1
+        maskOnCart.parentNode.querySelector('.price').innerHTML = parseInt(maskOnCart.parentNode.querySelector('.price').innerHTML) + 6
+        sum()
+        maskAlreadyOnCart = true
       }
     })
-    if (maskAlreadyOnCart == 0 || document.getElementsByClassName('mask-on-cart').length == 0) {
+    if (!maskAlreadyOnCart || document.getElementsByClassName('mask-on-cart').length == 0) {
       customerCart.insertAdjacentHTML('beforeend', '<div class="cart-item-container"></div>')
       customerCart.lastChild.appendChild(maskComingInCart)
-      customerCart.lastChild.insertAdjacentHTML('beforeend', '<p class="number-items">x<span>1</span></p><button class="operation">-</button> <button class="operation">+</button><button class="delete-item">suppress</button>')
+      customerCart.lastChild.insertAdjacentHTML('beforeend', '<div><div class="operations"><span class="number-items">x<span class="number">1</span></span><button class="operation">-</button> <button class="operation">+</button><i class="delete-item fa fa-trash" aria-hidden="true"></i></div><div><span class="price">6</span>&euro;</div></div>')
       customerCart.childNodes[1].innerHTML = " "
+      document.getElementById('buy-cart').classList.remove('hidden')
+      sum()
     }
-    maskAlreadyOnCart = 0
+    maskAlreadyOnCart = false
   })
 })
 
 
-
+function sum() {
+  var newSum = 0
+  document.querySelectorAll('.price').forEach(function(e){
+    newSum += parseInt(e.innerHTML)
+  })
+  if (newSum == 0) {
+    document.querySelector('#buy-cart').classList.add('hidden')
+    customerCart.childNodes[1].innerHTML = "Vous n'avez aucun masque dans votre panier"
+  } else {
+  document.getElementById('total-price').innerHTML = `${newSum}`
+  }
+}
 
 document.addEventListener('click', function(e){
   if (e.target && e.target.classList.contains('operation')){
     if (e.target.innerHTML == '-') {
-      e.target.parentNode.childNodes[1].lastChild.innerHTML = parseInt(e.target.parentNode.childNodes[1].lastChild.innerHTML) - 1
-      if (e.target.parentNode.childNodes[1].lastChild.innerHTML == 0) {
-        e.target.parentNode.remove()
+      e.target.parentNode.querySelector('.number').innerHTML = parseInt(e.target.parentNode.querySelector('.number').innerHTML) - 1
+      e.target.parentNode.parentNode.querySelector('.price').innerHTML = parseInt(e.target.parentNode.parentNode.querySelector('.price').innerHTML) - 6
+      
+      if (e.target.parentNode.querySelector('.number').innerHTML == 0) {
+        e.target.parentNode.parentNode.parentNode.remove()
+       
         cartEmpty()
       }
     } else {
-      e.target.parentNode.childNodes[1].lastChild.innerHTML = parseInt(e.target.parentNode.childNodes[1].lastChild.innerHTML) + 1
+      e.target.parentNode.querySelector('.number').innerHTML = parseInt(e.target.parentNode.querySelector('.number').innerHTML) + 1
+      e.target.parentNode.parentNode.querySelector('.price').innerHTML = parseInt(e.target.parentNode.parentNode.querySelector('.price').innerHTML) + 6
     }
+  sum()
   }
 })
 
 document.addEventListener('click', function(e){
   if (e.target && e.target.classList.contains('delete-item')){
-    e.target.parentNode.remove()
+    e.target.parentNode.parentNode.parentNode.remove()
+    sum()
     cartEmpty()
   }
 })
@@ -121,9 +139,11 @@ function cartEmpty(){
   }  
 }
 
-
-
-
+document.addEventListener('click', function(e){
+  if (e.target && e.target.id == 'buy') {
+    alert('Ce site ne propose pas réellement de masques !')
+  }
+})
 
 // Modal
 

@@ -25,14 +25,18 @@
   </div>
     <ul id="download">
       <li><a href="https://www.linkedin.com/in/daniel-venera/" target="_blank">Contact</a></li>
-      <li ><a id='toggleDropdown'><i class="fa fa-cart-arrow-down"></i></a>
-        <ul id="customerCart" class='hidden'>
+      <li ><a id='toggleDropdown'><i class="fa fa-cart-arrow-down" style="font-size: 24px"></i> Mon panier</a>
+        <ul id="customerCart">
           <li>Vous n'avez aucun masque dans votre panier</li>
+          <div id='buy-cart' class='hidden'>
+            <span><span id='total-price'>6</span> &euro;</span> <button id='buy'>Passer commande</button>
+          </div>
         </ul>
       </li>
     </ul>
   </nav>
   <div class="banner">
+    <div id="title">Mascarade<br>Stylish Masks for all</div>
     <a href="#container">
       <div id="arrow">&#8964;</div>
     </a>
