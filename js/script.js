@@ -69,6 +69,7 @@ let customerCart = document.querySelector('#customerCart')
 carts.forEach(function (cart) {
   cart.addEventListener('click', function (cart) {
     var maskComingInCart = document.createElement('img')
+    log(cart.target.parentNode.children[0].src)
     maskComingInCart.src = cart.target.parentNode.children[0].src
     maskComingInCart.classList.add('mask-on-cart')
     

@@ -23,6 +23,10 @@ body {
   background-color: #eee;
 }
 
+button {
+  font-family: 'Inconsolata', sans-serif;
+}
+
 body::after {
   content: '';
   display: block;
@@ -56,7 +60,7 @@ nav {
   z-index: 1;
   display: flex;
   justify-content: space-between;
-  border: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
 nav p {
@@ -169,7 +173,6 @@ footer a:hover {
 /* Filter */
 
 #filter {
-  width: 75%;
   margin: auto;
   padding: 10px;
   margin-top: 30px;
@@ -192,6 +195,8 @@ button::-moz-focus-inner {
 }
 
 /* Type */
+
+
 
 .filter-type, .filter-color {
   text-align: center;
@@ -268,13 +273,11 @@ button::-moz-focus-inner {
 /* Masks */
 
 #masks {
-  width: 70%;
+  width: 80%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 50px;
-  margin: auto;
-  margin-top: 20px;
+  margin: 50px auto;
 }
 
 .mask {
@@ -283,14 +286,15 @@ button::-moz-focus-inner {
 
 .mask-container {
   text-align: center;
-  margin-bottom: 20px;
+  margin: 20px 20px;
   padding: 0px auto;
+  font-size: 20px;
 }
 
-img {
-  width: 150px;
-  margin: 0px 10px 0px 10px;
+.mask {
+  width: 200px;
 }
+
 
 /* Cart */
 
@@ -378,8 +382,13 @@ img {
   border: none;
   color: white;
   border-radius: 2px;
-  height: 20px;
+  height: 30px;
   width: 30%;
+}
+
+#customerCart img {
+  width: 50%;
+  margin: 0px 10px 0px 10px;
 }
 
 /* Modal */
@@ -392,7 +401,7 @@ img {
   top: 0;
   height: 100%;
   width: 100%;
-  /* overflow: auto; */
+  overflow: auto;
   background-color: rgb(0, 0, 0, 0.5);
 }
 
@@ -400,9 +409,9 @@ img {
   position: relative;
   /* text-align: center; */
   background-color: white;
-  margin: 5% auto;
-  width: 300px;
-  padding: 0px;
+  margin: 1% auto;
+  width: 25%;
+  /* padding: 0px; */
   box-shadow: 0 5px 8px 0 rgb(0, 0, 0, 0.2), 0 7px 20px 0 rgb(0, 0, 0, 0.17)
 }
 
