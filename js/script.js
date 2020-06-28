@@ -147,32 +147,41 @@ document.addEventListener('click', function(e){
 
 // Modal
 
-var modal = document.querySelector('#simpleModal')
+var modalImage = document.querySelector('#modalImage')
 var modalBtn = document.querySelector('#modalBtn')
-var closeBtn = document.querySelector('#closeBtn')
+var closeBtns = document.querySelectorAll('.closeBtn')
 var imageModal = document.querySelector('#imageModal')
+var modalCart = document.querySelector('#modalCart')
 
 masks.forEach(function (mask) {
   mask.addEventListener('click', function (mask) {
-    modal.style.display = 'block'
+    modalImage.style.display = 'block'
     imageModal.src = mask.target.attributes.src.value
   })
 })
-closeBtn.addEventListener('click', closeModal)
+
+closeBtns.forEach(function(closeBtn) {
+  closeBtn.addEventListener('click', closeModal)
+})
 window.addEventListener('click', clickOutside)
 
-function closeModal() {
-  modal.style.display = 'none'
+function closeModal(e) {
+  e.target.parentNode.parentNode.style.display = 'none'
 }
 
 function clickOutside(e) {
-  if (e.target == modal)
-    modal.style.display = 'none'
+  if (e.target == modalImage) {
+    modalImage.style.display = 'none'
+  }
+  if (e.target == modalCart){
+    modalCart.style.display = 'none'
+  }
 }
 
 // Dropdown toggle
 
 var toggleDropdown = document.getElementById('toggleDropdown')
+var modalCart = document.querySelector('#modalCart')
 toggleDropdown.addEventListener('click', function(){
-  customerCart.classList.toggle('hidden')
+  modalCart.style.display = 'block'
 })

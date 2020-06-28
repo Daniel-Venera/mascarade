@@ -16,22 +16,17 @@
 
 <body>
   <nav>
-  <div>
-    <p>Mascarade</p>
-    <ul>
-      <li><a href="#container">Masks</a></li>
-      <li><a href="#about">About</a></li>
-    </ul>
-  </div>
+    <div>
+      <p>Mascarade</p>
+      <ul>
+        <li><a href="#container">Masks</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div>
     <ul id="download">
       <li><a href="https://www.linkedin.com/in/daniel-venera/" target="_blank">Contact</a></li>
-      <li ><a id='toggleDropdown'><i class="fa fa-cart-arrow-down" style="font-size: 24px"></i> Mon panier</a>
-        <ul id="customerCart">
-          <li>Vous n'avez aucun masque dans votre panier</li>
-          <div id='buy-cart' class='hidden'>
-            <span><span id='total-price'>6</span> &euro;</span> <button id='buy'>Passer commande</button>
-          </div>
-        </ul>
+      <li><a id='toggleDropdown'><i class="fa fa-cart-arrow-down" style="font-size: 24px"></i> Mon panier</a>
+
       </li>
     </ul>
   </nav>
@@ -42,7 +37,7 @@
     </a>
   </div>
   <div id='container'>
-    
+
     <section id="filter">
       <h2>Masks</h2>
       <div class='filter-type'>
@@ -62,60 +57,82 @@
     <div id='masks'>
       <div class='mask-container'>
         <img class='mask plain fushia' src="images/masque_rouge.jpg" />
-        <button class='cart'>Ajouter au panier</button>
+        <br>
+        6&euro;  <button class='cart'> <i class="fa fa-cart-arrow-down"></i></button>
       </div>
       <div class='mask-container'>
         <img class='mask plain green' src="images/masque_vert.jpg" />
-        <button class='cart'>Ajouter au panier</button>
+        <br>
+        6&euro;  <button class='cart'> <i class="fa fa-cart-arrow-down"></i></button>
       </div>
       <div class='mask-container'>
         <img class='mask plain blue' src="images/masque_bleu.jpg" />
-        <button class='cart'>Ajouter au panier</button>
+        <br>
+        6&euro;  <button class='cart'> <i class="fa fa-cart-arrow-down"></i></button>
       </div>
       <div class='mask-container'>
         <img class='mask plain orange' src="images/masque_orange.jpg" />
-        <button class='cart'>Ajouter au panier</button>
+        <br>
+        6&euro;  <button class='cart'> <i class="fa fa-cart-arrow-down"></i></button>
       </div>
       <div class='mask-container'>
         <img class='mask printed graphique' src="images/masque_imprime_0.jpg" />
-        <button class='cart'>Ajouter au panier</button>
+        <br>
+        6&euro;  <button class='cart'> <i class="fa fa-cart-arrow-down"></i></button>
       </div>
       <div class='mask-container'>
         <img class='mask printed horizon' src="images/masque_imprime_1.jpg" />
-        <button class='cart'>Ajouter au panier</button>
-      </div>
-
-      <div id="simpleModal" class="modal">
-        <div class="modal-content">
-          <img id='imageModal'>
-          <div id="closeBtn">&times;</div>
-        </div>
+        <br>
+        6&euro;  <button class='cart'> <i class="fa fa-cart-arrow-down"></i></button>
       </div>
     </div>
-    <section id='about'>
-      <h2>About</h2>
-      <div id="about-quote">
-        <img src='images/daniel_venera.jpg'>
-        <p data-aos="fade-right">
-        <blockquote>
-          After 2 years of experience in managing digital projects for different companies, I've decided to become a web
-          developer. I'm passionate about new technologies and web programming. I'm currently looking for a work-study
-          with my school (OpenClassrooms). I'm organized, rigorous and always optimistic. I hope you enjoyed the website.
-          Please
-          <a href="https://www.linkedin.com/in/daniel-venera/" target="_blank">contact me</a> for more detailed
-          information.
-        </blockquote>
-        </p>
+
+      <div id="modalImage" class="modal">
+        <div class="modal-content">
+          <img id='imageModal'>
+          <div class="closeBtn">&times;</div>
+        </div>
       </div>
-    </section>
-  </div>
-  
-  <footer>
-    Created with <i class="fa fa-heart"></i> by Daniel Venera
-    <br>
-    <a href='https://github.com/Daniel-Venera/portfolio' target="_blank"><i class='fa fa-github'></i></a>
-  </footer>
-  <script src="js/script.js"></script>
+      <div id="modalCart" class="modal">
+
+        <div class="modal-content">
+          <div id="customerCart">
+            <div>
+              Vous n'avez aucun masque dans votre panier
+            </div>
+            <div id='buy-cart' class='hidden'>
+              <span><span id='total-price'>6</span> &euro;</span> <button id='buy'>Passer commande</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <section id='about'>
+        <h2>About</h2>
+        <div id="about-quote">
+          <img src='images/daniel_venera.jpg'>
+          <p data-aos="fade-right">
+          <blockquote>
+            After 2 years of experience in managing digital projects for different companies, I've decided to become a
+            web
+            developer. I'm passionate about new technologies and web programming. I'm currently looking for a work-study
+            with my school (OpenClassrooms). I'm organized, rigorous and always optimistic. I hope you enjoyed the
+            website.
+            Please
+            <a href="https://www.linkedin.com/in/daniel-venera/" target="_blank">contact me</a> for more detailed
+            information.
+          </blockquote>
+          </p>
+        </div>
+      </section>
+    
+
+    <footer>
+      Created with <i class="fa fa-heart"></i> by Daniel Venera
+      <br>
+      <a href='https://github.com/Daniel-Venera/portfolio' target="_blank"><i class='fa fa-github'></i></a>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

@@ -175,8 +175,12 @@ footer a:hover {
   margin-top: 30px;
 }
 
-button, #closeBtn:hover, #closeBtn:focus, .mask:hover {
+button, .closeBtn:hover, .closeBtn:focus {
   cursor: pointer;
+}
+
+.mask:hover {
+  cursor: zoom-in
 }
 
 button:focus {
@@ -193,23 +197,22 @@ button::-moz-focus-inner {
   text-align: center;
 }
 
-.type, .cart {
-  background-color: white;
-  border: 1px solid #888888;
-  font-size: 18px;
-  color: #888888;
-}
-
 .type {
-  width: 200px;
-  height: 50px;
-  border-radius: 18px;
+  border: none;
+  background-color: white;
+  font-size: 18px;
+  color: #8e8e8e;
+  /* width: 200px; */
+  height: 30px;
   margin: 10px;
 }
 
-.selected-type, .cart {
-  background-color: #1b047c;
-  color: white;
+.selected-type {
+  /* background-color: #1b047c; */
+  /* color: white; */
+  /* text-decoration: underline; */
+  border-bottom: 2px solid rgb(141, 38, 61);
+  color: #3b3b3b;
 }
 
 /* Colors  */
@@ -265,7 +268,7 @@ button::-moz-focus-inner {
 /* Masks */
 
 #masks {
-  width: 100%;
+  width: 70%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -280,6 +283,8 @@ button::-moz-focus-inner {
 
 .mask-container {
   text-align: center;
+  margin-bottom: 20px;
+  padding: 0px auto;
 }
 
 img {
@@ -307,11 +312,10 @@ img {
   margin-bottom: 30px 
 }
 
-
 #customerCart {
   max-height: 500px;
   overflow: auto;
-  position: absolute;
+  /* position: absolute; */
   padding: 20px 10px;
   width: 300px;
   top: 52px;
@@ -369,7 +373,14 @@ img {
   display: block;
 }
 
-
+.cart {
+  background-color: rgb(141, 38, 61);
+  border: none;
+  color: white;
+  border-radius: 2px;
+  height: 20px;
+  width: 30%;
+}
 
 /* Modal */
 
@@ -381,16 +392,16 @@ img {
   top: 0;
   height: 100%;
   width: 100%;
-  overflow: auto;
+  /* overflow: auto; */
   background-color: rgb(0, 0, 0, 0.5);
 }
 
 .modal-content {
   position: relative;
-  text-align: center;
+  /* text-align: center; */
   background-color: white;
   margin: 5% auto;
-  width: 30%;
+  width: 300px;
   padding: 0px;
   box-shadow: 0 5px 8px 0 rgb(0, 0, 0, 0.2), 0 7px 20px 0 rgb(0, 0, 0, 0.17)
 }
@@ -401,7 +412,7 @@ img {
   padding: 0s;
 }
 
-#closeBtn {
+.closeBtn {
   color: black;
   position: absolute;
   top: 0;
@@ -409,7 +420,7 @@ img {
   font-size: 50px;
 }
 
-#closeBtn:hover, #closeBtn:focus {
+.closeBtn:hover, .closeBtn:focus {
   color: black;
   text-decoration: none;
 }
