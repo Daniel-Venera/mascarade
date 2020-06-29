@@ -73,7 +73,6 @@ carts.forEach(function (cart) {
   cart.addEventListener('click', function (cart) {
     oneMaskCart.style.display = 'block'
     var maskComingInCart = document.createElement('img')
-    log(cart.target.parentNode.children[0].src)
     maskComingInCart.src = cart.target.parentNode.children[0].src
     oneMaskCartImage.src = cart.target.parentNode.children[0].src
     maskComingInCart.classList.add('mask-on-cart')

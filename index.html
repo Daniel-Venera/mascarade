@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
-  <meta property='og:image'
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">  <meta property='og:image'
     content="https://www.consignor.com/wp-content/uploads/2019/06/Senior-Front-End-Developer-1080x675.jpg" />
   <link rel="icon" href="images/pc.png" type="image/png">
   <title>Mascarade</title>
@@ -17,10 +17,10 @@
 <body>
   <nav>
     <div>
-      <p>Mascarade</p>
+      <p class='logo'>Mascarade</p>
       <ul>
-        <li><a href="#container">Masks</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#container">Masques</a></li>
+        <li><a href="#about">À propos</a></li>
       </ul>
     </div>
     <ul id="download">
@@ -31,20 +31,20 @@
     </ul>
   </nav>
   <div class="banner">
-    <div id="title">Mascarade<br>Stylish Masks for all</div>
-    <a href="#container">
-      <div id="arrow">&#8964;</div>
+<div id="title">MASCARADE<br>Protégez-vous avec style</div>
+  <a href="#container">
+    <div id="arrow">&#8964;</div>
     </a>
   </div>
   <div id='container'>
 
     <section id="filter">
-      <h2>Masks</h2>
+      <h2>Masques</h2>
       <div class='filter-type'>
         <button id='all' class='type selected-type'>Tous</button>
         <button id='printed' class='type'>Imprimé</button>
         <button id='plain' class='type'>Uni</button>
-        
+
       </div>
       <div class='filter-color'>
         <button id='fushia' class='color plain'></button>
@@ -54,94 +54,88 @@
         <button id='orange' class='color plain'></button>
         <button id='horizon' class='color printed'></button>
       </div>
+      <div id='masks'>
+        <div class='mask-container'>
+          <img class='mask plain fushia' src="images/masque_rouge.jpg" />
+          <br>
+          6&euro; <i class="fa fa-cart-arrow-down cart"></i>
+        </div>
+        <div class='mask-container'>
+          <img class='mask plain green' src="images/masque_vert.jpg" />
+          <br>
+          6&euro; <i class="fa fa-cart-arrow-down cart"></i>
+        </div>
+        <div class='mask-container'>
+          <img class='mask plain blue' src="images/masque_bleu.jpg" />
+          <br>
+          6&euro; <i class="fa fa-cart-arrow-down cart"></i>
+        </div>
+        <div class='mask-container'>
+          <img class='mask plain orange' src="images/masque_orange.jpg" />
+          <br>
+          6&euro; <i class="fa fa-cart-arrow-down cart"></i>
+        </div>
+        <div class='mask-container'>
+          <img class='mask printed graphique' src="images/masque_imprime_0.jpg" />
+          <br>
+          6&euro; <i class="fa fa-cart-arrow-down cart"></i>
+        </div>
+        <div class='mask-container'>
+          <img class='mask printed horizon' src="images/masque_imprime_1.jpg" />
+          <br>
+          6&euro; <i class="fa fa-cart-arrow-down cart"></i>
+        </div>
+      </div>
     </section>
-    <div id='masks'>
-      <div class='mask-container'>
-        <img class='mask plain fushia' src="images/masque_rouge.jpg" />
-        <br>
-        6&euro;  <i class="fa fa-cart-arrow-down cart"></i>
+
+    <div id="modalImage" class="modal">
+      <div class="modal-content">
+        <img id='imageModal'>
+        <div class="closeBtn">&times;</div>
       </div>
-      <div class='mask-container'>
-        <img class='mask plain green' src="images/masque_vert.jpg" />
-        <br>
-        6&euro;  <i class="fa fa-cart-arrow-down cart"></i>
+    </div>
+    <div id="modalCart" class="modal">
+      <div class="modal-content">
+        <div id="customerCart">
+          <div>
+            Vous n'avez aucun masque dans votre panier
+          </div>
+          <div id='buy-cart' class='hidden'>
+            <span><span id='total-price'>6</span> &euro;</span> <button id='buy'>Passer commande</button>
+          </div>
+        </div>
       </div>
-      <div class='mask-container'>
-        <img class='mask plain blue' src="images/masque_bleu.jpg" />
-        <br>
-        6&euro;  <i class="fa fa-cart-arrow-down cart"></i>
-      </div>
-      <div class='mask-container'>
-        <img class='mask plain orange' src="images/masque_orange.jpg" />
-        <br>
-        6&euro;  <i class="fa fa-cart-arrow-down cart"></i>
-      </div>
-      <div class='mask-container'>
-        <img class='mask printed graphique' src="images/masque_imprime_0.jpg" />
-        <br>
-        6&euro;  <i class="fa fa-cart-arrow-down cart"></i>
-      </div>
-      <div class='mask-container'>
-        <img class='mask printed horizon' src="images/masque_imprime_1.jpg" />
-        <br>
-        6&euro;  <i class="fa fa-cart-arrow-down cart"></i>
+    </div>
+    <div id="oneMaskCart" class="modal">
+      <div class="modal-content" id='seeMyCartContent'>
+        <img id='oneMaskCartImage'>
+        <div id='oneMaskCartButtons'>
+          <button id='continue'>&#8592; Continuer mes achats</button>
+          <button id='seeMyCart' class='see-cart'>Voir mon panier</button>
+        </div>
       </div>
     </div>
 
-      <div id="modalImage" class="modal">
-        <div class="modal-content">
-          <img id='imageModal'>
-          <div class="closeBtn">&times;</div>
-        </div>
+    <section id='about'>
+      <h2>About</h2>
+      <div id="about-quote">
+        <img src='images/daniel_venera.jpg'>
+        <p data-aos="fade-right">
+        <blockquote>
+          Ce site a été créé uniquement pour entrainer mes compétences en HTML, CSS et Javascript. J'ai pu m'exercer notamment dans la création de filtres et de modales, ainsi que dans les interactions avec le DOM.
+          <a id='contact' href="https://www.linkedin.com/in/daniel-venera/" target="_blank">Contactez moi</a> pour plus d'informations.
+        </blockquote>
+        </p>
       </div>
-      <div id="modalCart" class="modal">
-        <div class="modal-content">
-          <div id="customerCart">
-            <div>
-              Vous n'avez aucun masque dans votre panier
-            </div>
-            <div id='buy-cart' class='hidden'>
-              <span><span id='total-price'>6</span> &euro;</span> <button id='buy'>Passer commande</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="oneMaskCart" class="modal">
-        <div class="modal-content" id='seeMyCartContent'>
-            <img id='oneMaskCartImage'>
-          <div id='oneMaskCartButtons'>
-            <button id='continue'>&#8592; Continuer mes achats</button>
-            <button id='seeMyCart' class='see-cart'>Voir mon panier</button>
-          </div>
-        </div>
-      </div>
-    
-      <section id='about'>
-        <h2>About</h2>
-        <div id="about-quote">
-          <img src='images/daniel_venera.jpg'>
-          <p data-aos="fade-right">
-          <blockquote>
-            After 2 years of experience in managing digital projects for different companies, I've decided to become a
-            web
-            developer. I'm passionate about new technologies and web programming. I'm currently looking for a work-study
-            with my school (OpenClassrooms). I'm organized, rigorous and always optimistic. I hope you enjoyed the
-            website.
-            Please
-            <a href="https://www.linkedin.com/in/daniel-venera/" target="_blank">contact me</a> for more detailed
-            information.
-          </blockquote>
-          </p>
-        </div>
-      </section>
-    
+    </section>
+  </div>
 
-    <footer>
-      Created with <i class="fa fa-heart"></i> by Daniel Venera
-      <br>
-      <a href='https://github.com/Daniel-Venera/portfolio' target="_blank"><i class='fa fa-github'></i></a>
-    </footer>
-    <script src="js/script.js"></script>
+  <footer>
+    Créé avec <i class="fa fa-heart"></i> par Daniel Venera
+    <br>
+    <a href='https://github.com/Daniel-Venera/portfolio' target="_blank"><i class='fa fa-github'></i></a>
+  </footer>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
