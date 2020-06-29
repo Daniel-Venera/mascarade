@@ -341,7 +341,7 @@ button::-moz-focus-inner {
   outline: none;
 }
 
-#toggleDropdown {
+.see-cart {
   cursor: pointer;
 }
 
@@ -378,17 +378,24 @@ button::-moz-focus-inner {
 }
 
 .cart {
-  background-color: rgb(141, 38, 61);
-  border: none;
-  color: white;
-  border-radius: 2px;
-  height: 30px;
-  width: 30%;
+  color: rgb(141, 38, 61);
+  cursor: pointer;
+  font-size: 18px;
 }
 
 #customerCart img {
   width: 50%;
   margin: 0px 10px 0px 10px;
+}
+
+#seeMyCartContent {
+  padding: 5px;
+}
+
+#oneMaskCartImage {
+  display: block;
+  width: 50%;
+  margin: auto;
 }
 
 /* Modal */
@@ -434,7 +441,28 @@ button::-moz-focus-inner {
   text-decoration: none;
 }
 
-/* About */
+#seeMyCartContent {
+  width: 50% !important
+}
+
+#oneMaskCartButtons {
+  display: flex;
+  justify-content: center;
+}
+
+#continue, #seeMyCart {
+  font-size: 18px;
+  width: 50%;
+  border: none;
+  padding: 20px 0px;
+  /* height: 30px; */
+  margin: 10px 10px;
+}
+
+#seeMyCart {
+  background-color: rgb(141, 38, 61);
+  color: white;
+}
 
 /* About */
 
@@ -465,6 +493,8 @@ blockquote {
   line-height: 30px;
   text-align: justify;
 }
+
+
 
 /* Responsive */
 

@@ -25,7 +25,7 @@
     </div>
     <ul id="download">
       <li><a href="https://www.linkedin.com/in/daniel-venera/" target="_blank">Contact</a></li>
-      <li><a id='toggleDropdown'><i class="fa fa-cart-arrow-down" style="font-size: 24px"></i> Mon panier</a>
+      <li><a class='see-cart'><i class="fa fa-cart-arrow-down" style="font-size: 24px"></i> Mon panier</a>
 
       </li>
     </ul>
@@ -59,32 +59,32 @@
       <div class='mask-container'>
         <img class='mask plain fushia' src="images/masque_rouge.jpg" />
         <br>
-        6&euro;  <button class='cart'> <i class="fa fa-cart-arrow-down"></i></button>
+        6&euro;  <i class="fa fa-cart-arrow-down cart"></i>
       </div>
       <div class='mask-container'>
         <img class='mask plain green' src="images/masque_vert.jpg" />
         <br>
-        6&euro;  <button class='cart'> <i class="fa fa-cart-arrow-down"></i></button>
+        6&euro;  <i class="fa fa-cart-arrow-down cart"></i>
       </div>
       <div class='mask-container'>
         <img class='mask plain blue' src="images/masque_bleu.jpg" />
         <br>
-        6&euro;  <button class='cart'> <i class="fa fa-cart-arrow-down"></i></button>
+        6&euro;  <i class="fa fa-cart-arrow-down cart"></i>
       </div>
       <div class='mask-container'>
         <img class='mask plain orange' src="images/masque_orange.jpg" />
         <br>
-        6&euro;  <button class='cart'> <i class="fa fa-cart-arrow-down"></i></button>
+        6&euro;  <i class="fa fa-cart-arrow-down cart"></i>
       </div>
       <div class='mask-container'>
         <img class='mask printed graphique' src="images/masque_imprime_0.jpg" />
         <br>
-        6&euro;  <button class='cart'> <i class="fa fa-cart-arrow-down"></i></button>
+        6&euro;  <i class="fa fa-cart-arrow-down cart"></i>
       </div>
       <div class='mask-container'>
         <img class='mask printed horizon' src="images/masque_imprime_1.jpg" />
         <br>
-        6&euro;  <button class='cart'> <i class="fa fa-cart-arrow-down"></i></button>
+        6&euro;  <i class="fa fa-cart-arrow-down cart"></i>
       </div>
     </div>
 
@@ -95,7 +95,6 @@
         </div>
       </div>
       <div id="modalCart" class="modal">
-
         <div class="modal-content">
           <div id="customerCart">
             <div>
@@ -104,6 +103,15 @@
             <div id='buy-cart' class='hidden'>
               <span><span id='total-price'>6</span> &euro;</span> <button id='buy'>Passer commande</button>
             </div>
+          </div>
+        </div>
+      </div>
+      <div id="oneMaskCart" class="modal">
+        <div class="modal-content" id='seeMyCartContent'>
+            <img id='oneMaskCartImage'>
+          <div id='oneMaskCartButtons'>
+            <button id='continue'>&#8592; Continuer mes achats</button>
+            <button id='seeMyCart' class='see-cart'>Voir mon panier</button>
           </div>
         </div>
       </div>

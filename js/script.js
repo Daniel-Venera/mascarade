@@ -5,7 +5,9 @@ let types = document.querySelectorAll('.type')
 let masks = document.querySelectorAll('.mask')
 let colors = document.querySelectorAll('.color')
 
+
 function select(typeOfButton, classType, element) {
+
   typeOfButton.forEach(function (type) {
     if (type.classList.contains(classType)) {
       type.classList.remove(classType)
@@ -65,12 +67,15 @@ var carts = document.querySelectorAll('.cart')
 var masksOnCart = document.querySelectorAll('.mask-on-cart')
 let maskAlreadyOnCart = false
 let customerCart = document.querySelector('#customerCart')
+let oneMaskCartImage = document.querySelector('#oneMaskCartImage')
 
 carts.forEach(function (cart) {
   cart.addEventListener('click', function (cart) {
+    oneMaskCart.style.display = 'block'
     var maskComingInCart = document.createElement('img')
     log(cart.target.parentNode.children[0].src)
     maskComingInCart.src = cart.target.parentNode.children[0].src
+    oneMaskCartImage.src = cart.target.parentNode.children[0].src
     maskComingInCart.classList.add('mask-on-cart')
     
     document.querySelectorAll('.mask-on-cart').forEach(function (maskOnCart) {
@@ -176,13 +181,29 @@ function clickOutside(e) {
   }
   if (e.target == modalCart){
     modalCart.style.display = 'none'
+  } if (e.target == oneMaskCart || e.target.classList.contains('see-cart')) {
+    oneMaskCart.style.display = 'none'
   }
 }
 
+// Modal Continue Cart 
+
+let oneMaskCart = document.querySelector('#oneMaskCart')
+let continueCart = document.querySelector('#continue')
+
+continueCart.addEventListener('click', function(){
+  oneMaskCart.style.display = 'none'
+})
+
+
 // Dropdown toggle
 
-var toggleDropdown = document.getElementById('toggleDropdown')
+var seeCartButtons = document.querySelectorAll('.see-cart')
 var modalCart = document.querySelector('#modalCart')
-toggleDropdown.addEventListener('click', function(){
-  modalCart.style.display = 'block'
+
+seeCartButtons.forEach(function(seeCart) {
+  seeCart.addEventListener('click', function(){
+    oneMaskCart.style.display = 'none'
+    modalCart.style.display = 'block'
+  })
 })
