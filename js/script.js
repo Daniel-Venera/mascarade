@@ -206,3 +206,10 @@ seeCartButtons.forEach(function(seeCart) {
     modalCart.style.display = 'block'
   })
 })
+
+// MenuBurger 
+
+var burgerMenu = document.querySelector('#burgerMenu')
+burgerMenu.addEventListener('click', function(){
+  log('oui')
+})

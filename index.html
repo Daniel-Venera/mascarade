@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">  <meta property='og:image'
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+  <meta property='og:image'
     content="https://www.consignor.com/wp-content/uploads/2019/06/Senior-Front-End-Developer-1080x675.jpg" />
   <link rel="icon" href="images/pc.png" type="image/png">
   <title>Mascarade</title>
@@ -18,22 +19,25 @@
   <nav>
     <div>
       <p class='logo'>Mascarade</p>
-      <ul>
+      <ul class='nav-item'>
         <li><a href="#container">Masques</a></li>
-        <li><a href="#about">À propos</a></li>
+        <li> <a href="#about">À propos</a></li>
       </ul>
     </div>
-    <ul id="download">
+    <ul class='nav-item'>
       <li><a href="https://www.linkedin.com/in/daniel-venera/" target="_blank">Contact</a></li>
-      <li><a class='see-cart'><i class="fa fa-cart-arrow-down" style="font-size: 24px"></i> Mon panier</a>
-
+      <li><a class='see-cart'><i class="fa fa-cart-arrow-down" style="font-size: 24px"></i> Mon
+          panier</a>
       </li>
+    </ul>
+    <ul id='burgerMenu'>
+      <li><i class="fa fa-bars" aria-hidden="true"></i></li>
     </ul>
   </nav>
   <div class="banner">
-<div id="title">MASCARADE<br>Protégez-vous avec style</div>
-  <a href="#container">
-    <div id="arrow">&#8964;</div>
+    <div id="title"><span>MASCARADE</span><br>Protégez-vous avec style</div>
+    <a href="#container">
+      <div id="arrow">&#8964;</div>
     </a>
   </div>
   <div id='container'>
@@ -117,13 +121,15 @@
     </div>
 
     <section id='about'>
-      <h2>About</h2>
+      <h2>À propos</h2>
       <div id="about-quote">
         <img src='images/daniel_venera.jpg'>
         <p data-aos="fade-right">
         <blockquote>
-          Ce site a été créé uniquement pour entrainer mes compétences en HTML, CSS et Javascript. J'ai pu m'exercer notamment dans la création de filtres et de modales, ainsi que dans les interactions avec le DOM.
-          <a id='contact' href="https://www.linkedin.com/in/daniel-venera/" target="_blank">Contactez moi</a> pour plus d'informations.
+          Ce site a été créé uniquement pour entrainer mes compétences en HTML, CSS et Javascript. J'ai pu m'exercer
+          notamment dans la création de filtres et de modales, ainsi que dans les interactions avec le DOM.
+          <a id='contact' href="https://www.linkedin.com/in/daniel-venera/" target="_blank">Contactez-moi</a> pour plus
+          d'informations.
         </blockquote>
         </p>
       </div>
