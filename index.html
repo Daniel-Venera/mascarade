@@ -17,21 +17,30 @@
 
 <body>
   <nav>
-    <div>
-      <p class='logo'>Mascarade</p>
-      <ul class='nav-item'>
-        <li><a href="#container">Masques</a></li>
-        <li> <a href="#about">À propos</a></li>
-      </ul>
-    </div>
+    <div> 
+    <p class='logo'>Mascarade</p>
+    <ul class='nav-item'>
+      <li><a href="#container">Masques</a></li>
+      <li><a href="#container">A propos</a></li>
+    </ul>
+  </div>
     <ul class='nav-item'>
       <li><a href="https://www.linkedin.com/in/daniel-venera/" target="_blank">Contact</a></li>
       <li><a class='see-cart'><i class="fa fa-cart-arrow-down" style="font-size: 24px"></i> Mon
           panier</a>
       </li>
     </ul>
-    <ul id='burgerMenu'>
-      <li><i class="fa fa-bars" aria-hidden="true"></i></li>
+    <ul id="dropdownMenu">
+      <li><a href='#'><i class="fa fa-bars" aria-hidden="true" id='burgerMenu'></i></a>
+        <ul id='burgerItems'>
+          <li><a href="#container">Masques</a></li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="https://www.linkedin.com/in/daniel-venera/" target="_blank">Contact</a></li>
+          <li><a class='see-cart'><i class="fa fa-cart-arrow-down" style="font-size: 24px"></i> Mon
+              panier</a>
+          </li>
+        </ul>
+      </li>
     </ul>
   </nav>
   <div class="banner">

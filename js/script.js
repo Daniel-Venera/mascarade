@@ -210,6 +210,12 @@ seeCartButtons.forEach(function(seeCart) {
 // MenuBurger 
 
 var burgerMenu = document.querySelector('#burgerMenu')
+var burgerItems = document.querySelector('#burgerItems')
 burgerMenu.addEventListener('click', function(){
-  log('oui')
+  if (burgerItems.style.display == 'block'){
+    burgerItems.style.display = 'none'
+  } else  {
+    burgerItems.style.display = 'block'
+  }
 })
+

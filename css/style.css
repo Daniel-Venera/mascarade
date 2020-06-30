@@ -48,7 +48,6 @@ section {
   margin-bottom: 30px;
 }
 
-/* Navbar  */
 
 /* Navbar */
 
@@ -74,9 +73,20 @@ nav p {
   /* line-height: 55px;  */
 }
 
-nav ul {
-  float: left;
+nav div {
+  width: 500px;
 }
+
+nav ul li ul {
+  display: block;
+  position: absolute;
+  right: 40px;
+  border: 1px solid rgb(223, 223, 223);
+  background-color: white;
+  padding-left: 0px;
+  width: 500px;
+}
+
 
 nav li {
   float: left;
@@ -108,9 +118,8 @@ a:visited {
   margin-top: 27px;
 }
 
-#burgerMenu {
+#dropdownMenu {
   display: none;
-  font-size: 30px;
 }
 
 /* Footer */
@@ -497,7 +506,6 @@ button::-moz-focus-inner {
 blockquote {
   font-size: 18px;
   line-height: 30px;
-  text-align: justify;
 }
 
 #contact {
@@ -514,10 +522,15 @@ blockquote {
   .nav-item {
     display: none;
   }
-  /* #burgerMenu {
+
+  #dropdownMenu {
     display: block;
-    margin-top: 20px;
-  } */
+  }
+
+  #dropdownMenu ul{
+    display: none;
+  width: 250px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -568,6 +581,4 @@ blockquote {
     width: 200px;
     margin: auto;
   }
-
-  
 }
