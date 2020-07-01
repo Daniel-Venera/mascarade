@@ -10,54 +10,49 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
   <meta property='og:image'
-    content="https://www.consignor.com/wp-content/uploads/2019/06/Senior-Front-End-Developer-1080x675.jpg" />
-  <link rel="icon" href="images/pc.png" type="image/png">
+    content="https://media3.s-nbcnews.com/j/newscms/2020_23/1575506/face-masks-give-back-kr-2x1-tease-200602_0deabbe43e91f6d2c539f0ceb52caee9.social_share_1200x630_center.jpg" />
+  <link rel="icon" href="images/favicon.png" type="image/png">
   <title>Mascarade</title>
 </head>
 
 <body>
+  <!-- Nav -->
   <nav>
-    <div> 
-    <p class='logo'>Mascarade</p>
-    <ul class='nav-item'>
-      <li><a href="#container">Masques</a></li>
-      <li><a href="#container">A propos</a></li>
-    </ul>
-  </div>
+    <div>
+      <a id='logo' href='#'>Mascarade</a>
+      <ul class='nav-item'>
+        <li><a href="#container">Masques</a></li>
+        <li><a href="#about">A propos</a></li>
+      </ul>
+    </div>
     <ul class='nav-item'>
       <li><a href="https://www.linkedin.com/in/daniel-venera/" target="_blank">Contact</a></li>
-      <li><a class='see-cart'><i class="fa fa-cart-arrow-down" style="font-size: 24px"></i> Mon
-          panier</a>
-      </li>
+      <li><a class='see-cart'><i class="fa fa-cart-arrow-down" style="font-size: 24px"></i> Mon panier</a></li>
     </ul>
     <ul id="dropdownMenu">
-      <li><a href='#'><i class="fa fa-bars" aria-hidden="true" id='burgerMenu'></i></a>
+      <li><a><span><i class="fa fa-bars" aria-hidden="true" id="burgerMenu" style="font-size: 24px"></i></span></a>
         <ul id='burgerItems'>
           <li><a href="#container">Masques</a></li>
           <li><a href="#about">À propos</a></li>
           <li><a href="https://www.linkedin.com/in/daniel-venera/" target="_blank">Contact</a></li>
-          <li><a class='see-cart'><i class="fa fa-cart-arrow-down" style="font-size: 24px"></i> Mon
-              panier</a>
-          </li>
+          <li><a class='see-cart'><i class="fa fa-cart-arrow-down" style="font-size: 24px"></i> Mon panier</a></li>
         </ul>
       </li>
     </ul>
   </nav>
+  <!-- Banner -->
   <div class="banner">
     <div id="title"><span>MASCARADE</span><br>Protégez-vous avec style</div>
-    <a href="#container">
-      <div id="arrow">&#8964;</div>
-    </a>
+    <div id="arrow"><a href="#container">&#8964;</a></div>
   </div>
   <div id='container'>
-
-    <section id="filter">
+    <!-- Shop -->
+    <section id="shop">
       <h2>Masques</h2>
       <div class='filter-type'>
         <button id='all' class='type selected-type'>Tous</button>
         <button id='printed' class='type'>Imprimé</button>
         <button id='plain' class='type'>Uni</button>
-
       </div>
       <div class='filter-color'>
         <button id='fushia' class='color plain'></button>
@@ -101,6 +96,7 @@
       </div>
     </section>
 
+    <!-- Modals -->
     <div id="modalImage" class="modal">
       <div class="modal-content">
         <img id='imageModal'>
@@ -122,13 +118,16 @@
     <div id="oneMaskCart" class="modal">
       <div class="modal-content" id='seeMyCartContent'>
         <img id='oneMaskCartImage'>
+        <div>
+          Vous avez rajouté cet article dans votre panier !
+        </div>
         <div id='oneMaskCartButtons'>
           <button id='continue'>&#8592; Continuer mes achats</button>
           <button id='seeMyCart' class='see-cart'>Voir mon panier</button>
         </div>
       </div>
     </div>
-
+    <!-- About -->
     <section id='about'>
       <h2>À propos</h2>
       <div id="about-quote">
@@ -144,11 +143,11 @@
       </div>
     </section>
   </div>
-
+  <!-- Footer -->
   <footer>
     Créé avec <i class="fa fa-heart"></i> par Daniel Venera
     <br>
-    <a href='https://github.com/Daniel-Venera/portfolio' target="_blank"><i class='fa fa-github'></i></a>
+    <a href='https://github.com/Daniel-Venera/mascarade/' target="_blank"><i class='fa fa-github'></i></a>
   </footer>
   <script src="js/script.js"></script>
 </body>

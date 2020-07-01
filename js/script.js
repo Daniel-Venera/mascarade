@@ -1,5 +1,3 @@
-let log = console.log
-
 let buttons = document.querySelectorAll('button.type, button.color')
 let types = document.querySelectorAll('.type')
 let masks = document.querySelectorAll('.mask')
@@ -7,7 +5,6 @@ let colors = document.querySelectorAll('.color')
 
 
 function select(typeOfButton, classType, element) {
-
   typeOfButton.forEach(function (type) {
     if (type.classList.contains(classType)) {
       type.classList.remove(classType)
@@ -219,3 +216,8 @@ burgerMenu.addEventListener('click', function(){
   }
 })
 
+document.addEventListener('click', function (e) {
+  if (burgerItems.style.display == 'block' && e.target && e.target != burgerMenu) {
+    burgerItems.style.display = 'none'
+  }
+})
