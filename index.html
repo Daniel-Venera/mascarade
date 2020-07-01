@@ -22,7 +22,7 @@
       <a id='logo' href='#'>Mascarade</a>
       <ul class='nav-item'>
         <li><a href="#container">Masques</a></li>
-        <li><a href="#about">A propos</a></li>
+        <li><a href="#about">À propos</a></li>
       </ul>
     </div>
     <ul class='nav-item'>
@@ -42,8 +42,8 @@
   </nav>
   <!-- Banner -->
   <div class="banner">
-    <div id="title"><span>MASCARADE</span><br>Protégez-vous avec style</div>
-    <div id="arrow"><a href="#container">&#8964;</a></div>
+    <div id="title">Protégez-vous avec style</div>
+    <div class="arrow bounce"><a href="#container">&#8964;</a></div>
   </div>
   <div id='container'>
     <!-- Shop -->
@@ -64,32 +64,44 @@
       </div>
       <div id='masks'>
         <div class='mask-container'>
-          <img class='mask plain fushia' src="images/masque_rouge.jpg" />
+          <div class='img-hover-zoom'>
+            <img class='mask plain fushia' src="images/masque_rouge.jpg" />
+          </div>
           <br>
           6&euro; <i class="fa fa-cart-arrow-down cart"></i>
         </div>
         <div class='mask-container'>
-          <img class='mask plain green' src="images/masque_vert.jpg" />
+          <div class='img-hover-zoom'>
+            <img class='mask plain green' src="images/masque_vert.jpg" />
+          </div>
           <br>
           6&euro; <i class="fa fa-cart-arrow-down cart"></i>
         </div>
         <div class='mask-container'>
-          <img class='mask plain blue' src="images/masque_bleu.jpg" />
+          <div class='img-hover-zoom'>
+            <img class='mask plain blue' src="images/masque_bleu.jpg" />
+          </div>
           <br>
           6&euro; <i class="fa fa-cart-arrow-down cart"></i>
         </div>
         <div class='mask-container'>
-          <img class='mask plain orange' src="images/masque_orange.jpg" />
+          <div class='img-hover-zoom'>
+            <img class='mask plain orange' src="images/masque_orange.jpg" />
+          </div>
           <br>
           6&euro; <i class="fa fa-cart-arrow-down cart"></i>
         </div>
         <div class='mask-container'>
-          <img class='mask printed graphique' src="images/masque_imprime_0.jpg" />
+          <div class='img-hover-zoom'>
+            <img class='mask printed graphique' src="images/masque_imprime_0.jpg" />
+          </div>
           <br>
           6&euro; <i class="fa fa-cart-arrow-down cart"></i>
         </div>
         <div class='mask-container'>
-          <img class='mask printed horizon' src="images/masque_imprime_1.jpg" />
+          <div class='img-hover-zoom'>
+            <img class='mask printed horizon' src="images/masque_imprime_1.jpg" />
+          </div>
           <br>
           6&euro; <i class="fa fa-cart-arrow-down cart"></i>
         </div>
@@ -99,7 +111,9 @@
     <!-- Modals -->
     <div id="modalImage" class="modal">
       <div class="modal-content">
-        <img id='imageModal'>
+        <div class="img-magnifier-container">
+          <img id='imageModal'>
+        </div>
         <div class="closeBtn">&times;</div>
       </div>
     </div>

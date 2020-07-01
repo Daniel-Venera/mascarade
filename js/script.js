@@ -22,14 +22,14 @@ buttons.forEach(button =>
             color.classList.remove('hidden')
           }
         })
-        if (mask.parentNode.classList.contains('hidden')) {
-        mask.parentNode.classList.remove('hidden')
+        if (mask.parentNode.parentNode.classList.contains('hidden')) {
+        mask.parentNode.parentNode.classList.remove('hidden')
         }
       } else if (!mask.classList.contains(e.target.id)) {
-        mask.parentNode.classList.add('hidden')
+        mask.parentNode.parentNode.classList.add('hidden')
 
       } else {
-        mask.parentNode.classList.remove('hidden')
+        mask.parentNode.parentNode.classList.remove('hidden')
       }
     })
 
@@ -70,8 +70,8 @@ carts.forEach(function (cart) {
   cart.addEventListener('click', function (cart) {
     oneMaskCart.style.display = 'block'
     var maskComingInCart = document.createElement('img')
-    maskComingInCart.src = cart.target.parentNode.children[0].src
-    oneMaskCartImage.src = cart.target.parentNode.children[0].src
+    maskComingInCart.src = cart.target.parentNode.children[0].children[0].src
+    oneMaskCartImage.src = cart.target.parentNode.children[0].children[0].src
     maskComingInCart.classList.add('mask-on-cart')
     
     document.querySelectorAll('.mask-on-cart').forEach(function (maskOnCart) {
@@ -221,3 +221,4 @@ document.addEventListener('click', function (e) {
     burgerItems.style.display = 'none'
   }
 })
+

@@ -114,11 +114,61 @@ a:visited {
 #logo {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 32px;
-  margin: 10px 0px 0px 0px
+  margin: 10px 0px 0px 0px;
+  border: 1px solid black;
+  border-radius: 2px;
 }
 
 #dropdownMenu {
   display: none;
+}
+
+
+.nav-item a:before, .nav-item a:after
+{
+    position: absolute;
+    opacity: 0;
+    width: 0%;
+    height: 2px;
+    content: '';
+    background: black;
+    transition: all 0.3s;
+}
+
+.nav-item a:before
+{
+    left: 0px;
+    top: 0px;
+}
+
+.nav-item a:after
+{
+    right: 0px;
+    bottom: 0px;
+}
+
+.nav-item a:hover:before, .nav-item a:hover:after
+{
+    opacity: 1;
+    width: 100%;
+}
+
+
+
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
 }
 
 /* Footer */
@@ -166,16 +216,16 @@ footer i {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
-#arrow {
+.arrow {
   position: absolute;
   color: white;
   font-size: 100px;
-  top: 580px;
+  top: 500px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-#arrow a:visited {
+.arrow a:visited {
   color: white;
 }
 
@@ -227,10 +277,12 @@ button::-moz-focus-inner {
   margin: 10px;
 }
 
-.selected-type {
+.selected-type, .type:hover {
   border-bottom: 2px solid rgb(141, 38, 61);
   color: #3b3b3b;
 }
+
+
 
 /* Colors  */
 
@@ -250,7 +302,7 @@ button::-moz-focus-inner {
   padding: 10px;
 }
 
-.selected-color {
+.selected-color, .color:hover {
   border: 1px solid #1b047c;
 }
 
@@ -305,6 +357,32 @@ button::-moz-focus-inner {
 
 .mask {
   width: 200px;
+}
+
+.img-magnifier-container {
+  position: relative;
+}
+
+.img-magnifier-glass {
+  position: absolute;
+  border: 1px solid #000;
+  border-radius: 50%;
+  cursor: none;
+  /*Set the size of the magnifier glass:*/
+  width: 100px;
+  height: 100px;
+}
+
+.img-hover-zoom img{
+  transition: transform .7s ease;
+}
+
+.img-hover-zoom:hover img {
+  transform: scale(1.2);
+}
+
+.img-hover-zoom {
+  overflow: hidden;
 }
 
 /* Cart */
@@ -547,7 +625,7 @@ blockquote {
   .banner {
     height: 200px;
   }
-  #arrow {
+  .arrow {
     display: none;
   }
   #container {
